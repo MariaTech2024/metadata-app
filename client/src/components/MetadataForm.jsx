@@ -43,7 +43,7 @@ function MetadataForm() {
     }
 
     try {
-      const response = await axios.post('https://metadata-app-3ury-34scewltr-mariias-projects-3257d58c.vercel.app/fetch-metadata', { urls });
+      const response = await axios.post('http://localhost:5000/fetch-metadata', { urls });
       const data = response.data;
 
       if (data.some(item => item.error)) {
