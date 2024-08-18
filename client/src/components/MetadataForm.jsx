@@ -8,6 +8,15 @@ function MetadataForm() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const API_BASE_URL = 'http://localhost:5000'; 
+
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
   const handleUrlChange = (index, event) => {
     const newUrls = [...urls];
     let url = event.target.value;
@@ -43,7 +52,7 @@ function MetadataForm() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/fetch-metadata', { urls });
+      const response = await api.post('/fetch-metadata', { urls });
       const data = response.data;
 
       if (data.some(item => item.error)) {
