@@ -8,7 +8,7 @@ function MetadataForm() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const API_BASE_URL = 'https://metadata-app-ws72.vercel.app'; 
+  const API_BASE_URL = 'http://localhost:5000'; 
 
 const api = axios.create({
   baseURL: API_BASE_URL,
