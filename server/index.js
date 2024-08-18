@@ -18,7 +18,8 @@ const rateLimiter = rateLimit({
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://metadata-app-seven.vercel.app',
+  credentials: true 
 }));
 
 app.use(rateLimiter);
