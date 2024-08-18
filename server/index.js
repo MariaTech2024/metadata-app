@@ -26,6 +26,15 @@ app.use(bodyParser.json());
 
 app.use('/', metadataRoutes);
 
+export default (req, res) => {
+  return new Promise((resolve, reject) => {
+    app(req, res, (err) => {
+      if (err) return reject(err);
+      resolve();
+    });
+  });
+};
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
