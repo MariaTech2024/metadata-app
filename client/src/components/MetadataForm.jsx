@@ -8,7 +8,9 @@ function MetadataForm() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const API_BASE_URL = 'http://localhost:5000'; 
+  const API_BASE_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:5000'
+  : 'https://metadata-app-kfcz.vercel.app';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
