@@ -17,7 +17,11 @@ const rateLimiter = rateLimit({
 
 // Security middleware
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: 'https://metadata-app-plum.vercel.app', 
+  methods: 'GET,POST', 
+  credentials: true 
+}));
 
 app.use(rateLimiter);
 
