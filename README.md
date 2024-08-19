@@ -2,7 +2,7 @@ URL Metadata Fetcher
 
 This is a web application that allows users to input a list of URLs, fetch metadata (including the title, description, and an image) for each URL, and display the results on the front-end. The application is built with a React front-end and a Node.js back-end.
 Features:
-    - Input Multiple URLs: Users can input a minimum of 3 URLs at a time.
+    - Input Multiple URLs: Users can input 3 URLs at a time.
     - Fetch Metadata: The application fetches metadata (title, description, image) for each URL.
     - Display Results: The metadata is displayed in a visually appealing manner.
     - Error Handling: Proper error handling for invalid URLs or cases where metadata cannot be retrieved.
@@ -14,9 +14,8 @@ Prerequisites:
 - npm: Node Package Manager comes with Node.js and is needed to install dependencies.
 
 For installation clone the repository:
-
-git clone https://github.com/your-username/url-metadata-fetcher.git
-cd url-metadata-fetcher
+git clone https://github.com/your-username/metadata-app.git
+cd metadata-app
 
 Install dependencies:  
 - cd server
