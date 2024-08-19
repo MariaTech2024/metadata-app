@@ -12,13 +12,6 @@
       "src": "/(.*)",
       "dest": "index.js"
      }
-    ],
-    
-        "rewrites": [
-          {
-            "source": "/fetch-metadata",
-            "destination": "http://localhost:5000/fetch-metadata"
-          }
-        ]
+    ]
       }
    
